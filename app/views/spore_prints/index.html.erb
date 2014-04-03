@@ -1,0 +1,31 @@
+<h1>Listing spore_prints</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Src</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @spore_prints.each do |spore_print| %>
+      <tr>
+        <td><%= spore_print.name %></td>
+        <td><%= spore_print.description %></td>
+        <td><%= spore_print.src %></td>
+        <td><%= link_to 'Show', spore_print %></td>
+        <td><%= link_to 'Edit', edit_spore_print_path(spore_print) %></td>
+        <td><%= link_to 'Destroy', spore_print, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Spore print', new_spore_print_path %>

@@ -1,0 +1,29 @@
+<h1>Listing genus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @genus.each do |genu| %>
+      <tr>
+        <td><%= genu.name %></td>
+        <td><%= genu.description %></td>
+        <td><%= link_to 'Show', genu %></td>
+        <td><%= link_to 'Edit', edit_genu_path(genu) %></td>
+        <td><%= link_to 'Destroy', genu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Genu', new_genu_path %>

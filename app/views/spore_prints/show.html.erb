@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @spore_print.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @spore_print.description %>
+</p>
+
+<p>
+  <strong>Src:</strong>
+  <%= @spore_print.src %>
+</p>
+
+<%= link_to 'Edit', edit_spore_print_path(@spore_print) %> |
+<%= link_to 'Back', spore_prints_path %>
